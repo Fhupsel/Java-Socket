@@ -5,16 +5,13 @@ import java.util.Scanner;
 public class Cliente {
     public static void main(String[] args) {
         try {
-            // Conectar ao servidor (localhost = mesma máquina) na porta 12345
             Socket socket = new Socket("localhost", 12345);
             System.out.println("Conectado ao servidor!");
 
-            // Criar fluxo de entrada/saída
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             Scanner scanner = new Scanner(System.in);
 
-            // Interface simples para envio de ID
             while (true) {
                 System.out.print("Digite um ID (ou 'sair' para encerrar): ");
                 String input = scanner.nextLine();

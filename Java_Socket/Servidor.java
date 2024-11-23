@@ -35,7 +35,7 @@ public class Servidor {
         ) {
             String input;
             while ((input = in.readLine()) != null) {
-                // Verificar se o cliente deseja sair
+                // Verificar se o cliente deseja sair -> sair
                 if (input.equalsIgnoreCase("sair")) {
                     out.println("Conexão encerrada. Até mais!");
                     break;
